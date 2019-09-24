@@ -1,0 +1,21 @@
+#include "holberton.h"
+/**
+ *print_alphabet_x10 - This is the logical function
+ *_putchar: This is a putchar function
+ */
+
+void print_alphabet_x10(void)
+{
+	char var1;
+	int var2 = 1;
+
+	while (var2 <= 10)
+	{
+		for (var1 = 97; var1 < 123 ; var1++)
+		{
+		_putchar(var1);
+	}
+		_putchar('\n');
+		var2++;
+	}
+}
