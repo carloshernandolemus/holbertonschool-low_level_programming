@@ -1,8 +1,7 @@
 #include "holberton.h"
 /**
  *print_numbers - Is the function
- *@var1: Is the first variable function
- *Return: Return the function
+ *_putchar: Display result of variable
  */
 void print_numbers(void)
 {
