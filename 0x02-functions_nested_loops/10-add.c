@@ -1,4 +1,3 @@
-File Edit Options Buffers Tools C Help
 #include "holberton.h"
 /**
  *add - This is the logical function prototype adition
