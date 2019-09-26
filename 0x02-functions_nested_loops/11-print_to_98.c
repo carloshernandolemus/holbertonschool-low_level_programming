@@ -9,7 +9,7 @@ void print_to_98(int var1)
 	{
 		for (; var1 <= 98; var1++)
 		{
-			printf("%d", var1);
+			printf(" %d", var1);
 			if (var1 != 98)
 			{
 				printf(", ");
