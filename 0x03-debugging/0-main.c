@@ -5,7 +5,7 @@
  * Return: 0
  */
 
-aint main(void)
+int main(void)
 {
         int i;
 
