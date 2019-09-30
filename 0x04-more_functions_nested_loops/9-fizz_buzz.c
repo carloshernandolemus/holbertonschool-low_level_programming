@@ -24,9 +24,9 @@ int main(void)
 		}
 		else
 		{
-			printf("%i", i);
+			printf("%i", var1);
 		}
-		if (i != 100)
+		if (var1 != 100)
 		{
 			printf(" ");
 		}
