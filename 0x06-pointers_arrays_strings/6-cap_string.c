@@ -22,12 +22,12 @@ char *cap_string(char *s)
 		{
 			s[var2] = s[var2] - 32;
 		}
-
 		if ((s[var2] == 44 || s[var2] == 59 || s[var2] == 46 ||
 		     s[var2] == 33 || s[var2] == 63 || s[var2] == 34 ||
 		     s[var2] == 40 || s[var2] == 41 || s[var2] == 123 ||
-		     s[var2] == 125) &&
-		    (s[var2 + 1] >= 97 && s[var2 + 1] <= 122))
+		     s[var2] == 125 || s[var2] == '\t' || s[var2] == 32 ||
+		    s[var2] == '\n') &&
+			(s[var2 + 1] >= 97 && s[var2 + 1] <= 122))
 		{
 			s[var2 + 1] = s[var2 + 1] - 32;
 		}
