@@ -1,12 +1,17 @@
 #include "holberton.h"
 #include <stdio.h>
 #include <stdlib.h>
-
+/**
+ *create_array - The main function of array and integer
+ *@size: Size of array
+ *@c: This is te char variable
+ *Return: Return of value
+ */
 char *create_array(unsigned int size, char c)
 {
 	unsigned int var1 = 0;
 	char *var2;
-	
+
 	if (size == 0)
 	{
 		return (0);
