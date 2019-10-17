@@ -3,7 +3,7 @@
 #include <stdlib.h>
 /**
  *create_array - The main function of array and integer
- *@size: Size of array
+ *@size: Size of the array
  *@c: This is te char variable
  *Return: Return of value
  */
