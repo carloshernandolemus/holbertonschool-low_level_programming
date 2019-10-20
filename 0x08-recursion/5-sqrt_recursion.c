@@ -17,15 +17,14 @@ int sqrt_recu(int n, int i)
 	}
 	return (sqrt_recu(n, i + 1));
 }
-
 /**
  * _sqrt_recursion - Second function
  * @n: Integer n
  * Return: Return sqrt_recu -
  */
-
 int _sqrt_recursion(int n)
 {
 	int i = 0;
+
 	return (sqrt_recu(n, i));
 }
