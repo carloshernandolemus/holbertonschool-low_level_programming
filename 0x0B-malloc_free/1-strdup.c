@@ -24,7 +24,7 @@ char *_strdup(char *str)
 	if (var3 == NULL)
 		return (NULL);
 
-	for (var2 = 0;var2 <= var1; var2++)
+	for (var2 = 0; var2 <= var1; var2++)
 	{
 		var3[var2] = str[var2];
 	}
