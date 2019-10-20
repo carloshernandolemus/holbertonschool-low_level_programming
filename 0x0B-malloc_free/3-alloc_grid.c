@@ -1,10 +1,10 @@
 #include"holberton.h"
 #include<stdlib.h>
 /**
- *alloc_grid - allocate space for a pointer to a two dimensional array
- *@width: width of the two dimensional array
- *@height: height of the two dimensional array
- *Return:a pointer to a two dimensional
+ *alloc_grid - Function for return pointer 2 dimensional arrays
+ *@width: Width dimensional array
+ *@height: Height dimensional array
+ *Return: Return a pointer
  */
 int **alloc_grid(int width, int height)
 {
