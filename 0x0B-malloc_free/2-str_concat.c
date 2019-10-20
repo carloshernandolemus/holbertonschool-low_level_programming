@@ -43,7 +43,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	for (var4 = 0; var4 <= var2; var4++)
 	{
-		var5[var1 + var4] = s2var4l];
+		var5[var1 + var4] = s2[var4];
 	}
 	return (var5);
 }
