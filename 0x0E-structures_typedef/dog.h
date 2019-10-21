@@ -1,9 +1,11 @@
 #ifndef DJANGO
 #define DJANGO
 /**
- *struck dog - Structure dog
- *
- *Return: Return to pointer
+ * struct dog - Structure dog
+ * @name: Type char of the name
+ * @age: Type float for the age
+ * @owner: Type char for the owner
+ * Description: This is the structure to form data
  */
 struct dog
 {
