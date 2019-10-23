@@ -1,76 +1,73 @@
 #include "dog.h"
-#include <stdio.h>
 #include <stdlib.h>
-
 /**
- * *_strdup - This is a function prototype
- * @str: This variable recive the first value of the function main
- * Description: Returns a pointer to a newly allocated space in memory
- * section header: Section description
- * Return: Return a pointer
+ * _strlen - Gives length of a string
+ * @s: String
+ * Return: Returns length of string
  */
-
-char *_strdup(char *str)
+int _strlen(char *s)
 {
 	int var1;
-	char *str2;
 
-	if (str == NULL)
-	{
-		return (NULL);
-	}
-	for (var1 = 0; str[var1] != '\0'; var1++)
-	{
-	}
-	str2 = (char *)malloc((sizeof(char) * var1) + 1);
-	if (str2 == NULL)
-	{
-		free(str2);
-		return (NULL);
-	}
-	for (var1 = 0; str[var1] != '\0'; var1++)
-	{
-		str2[var1] = str[var1];
-	}
-	str2[var1] = '\0';
-	return (str2);
+	var1 = 0;
+	while (s[var1])
+		var1++;
+	return (var1);
 }
-
 /**
- * new_dog - This is the function prototype
- * @name: This variable recive the first value of the function main
- * @age: This variable recive the second value of the function main
- * @owner: This variable recive the thirth value of the function main
- * Description: Function that creates a new dog
- * section header: Section description
- * Return: Return a pointer
+ * _strcpy - Copy a string to another string
+ * @dest: string 1
+ * @src: string 2
+ * Return: String copy
  */
+char *_strcpy(char *dest, char *src)
+{
+	int var1;
 
+	for (var1 = 0; var1 <= _strlen(src); var1++)
+		dest[var1] = src[var1];
+	return (dest);
+}
+/**
+ * new_dog - Creates a new dog
+ * @name: Name of the dog
+ * @age:  Age of the dog
+ * @owner: Name of the owner
+ * Return: A pointer to the new dog
+ */
 dog_t *new_dog(char *name, float age, char *owner)
 {
 	dog_t *newD;
-	char *varP, *varQ;
+	char *Dname, *Downer;
 
 	newD = malloc(sizeof(dog_t));
+
 	if (newD == NULL)
+		return (NULL);
+
+	Dname = malloc((_strlen(name) + 1) * sizeof(char));
+
+	if (Dname == NULL)
 	{
 		free(newD);
 		return (NULL);
 	}
-	varP = _strdup(name);
-	if (varP == NULL)
+
+	Downer = malloc((_strlen(owner) + 1) * sizeof(char));
+
+	if (Downer == NULL)
 	{
-		free(varP);
+		free(Dname);
+		free(newD);
 		return (NULL);
 	}
-	varQ = _strdup(owner);
-	if (varQ == NULL)
-	{
-		free(varQ);
-		return (NULL);
-	}
-	newD->name = name;
+
+	_strcpy(Dname, name);
+	_strcpy(Downer, owner);
+
+	newD->name = Dname;
 	newD->age = age;
-	newD->owner = owner;
+	newD->owner = Downer;
+
 	return (newD);
 }
