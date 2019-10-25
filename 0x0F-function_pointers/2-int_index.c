@@ -2,10 +2,10 @@
 #include <stdlib.h>
 #include "function_pointers.h"
 /**
- * array_iterator - Function of a pointer
+ * int_index - Function of a pointer
  * @array: The first input
  * @size: The second input
- * @action: The pointer function
+ * @cmp: The pointer function
  * Return: Void return
  */
 int int_index(int *array, int size, int (*cmp)(int))
