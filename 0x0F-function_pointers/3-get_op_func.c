@@ -23,7 +23,7 @@ int (*get_op_func(char *s))(int, int)
 		{
 			return (ops[var1].f);
 		}
-		i++;
+		var1++;
 	}
 	return (ops[var1].f);
 }
