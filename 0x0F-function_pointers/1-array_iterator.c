@@ -2,9 +2,10 @@
 #include <stdlib.h>
 #include "function_pointers.h"
 /**
- * print_name - Function of a pointer
- * @name: The name pointer array
- * @f: Function to pointer
+ * array_iterator - Function of a pointer
+ * @array: The first input
+ * @size: The second input
+ * @action: The pointer function
  * Return: Void return
  */
 void array_iterator(int *array, size_t size, void (*action)(int))
