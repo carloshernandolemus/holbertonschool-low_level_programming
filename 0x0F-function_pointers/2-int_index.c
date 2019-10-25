@@ -5,7 +5,7 @@
  * int_index - Function of a pointer
  * @array: The first input
  * @size: The second input
- * @cmp: The pointer function
+ * @cmp: The pointer function cpm
  * Return: Void return
  */
 int int_index(int *array, int size, int (*cmp)(int))
