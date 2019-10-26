@@ -14,10 +14,10 @@ void print_strings(const char *separator, const unsigned int n, ...)
 
 	va_start(thor, n);
 
-	for(var1 = 0; var1 < n; var1++)
+	for (var1 = 0; var1 < n; var1++)
 	{
 		var2 = va_arg(thor, char *);
-		if(var2 == NULL)
+		if (var2 == NULL)
 		{
 			printf("(nil)");
 		}
