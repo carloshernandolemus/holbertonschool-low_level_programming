@@ -2,9 +2,9 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 /**
- * main - check the code for Holberton School students.
- *
- * Return: Always 0.
+ * sum_them_all - This is the sum function
+ * @n: This is the arguments numbers
+ * Return: Return the sum value
  */
 int sum_them_all(const unsigned int n, ...)
 {
