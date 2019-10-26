@@ -2,11 +2,11 @@
 #include <stdarg.h>
 #include "variadic_functions.h"
 /**
- *
- *
- *
+ * print_strings - This is a function that print strings
+ * @separator: This is the separator string
+ * @n: This is the arguments numbers
  */
-void print_numbers(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	va_list thor;
 	unsigned int var1;
@@ -25,11 +25,11 @@ void print_numbers(const char *separator, const unsigned int n, ...)
 		{
 			printf("%s", var2);
 		}
-		if (var1 != (n -1) && separator != NULL)
+		if (var1 != (n - 1) && separator != NULL)
 		{
 			printf("%s", separator);
 		}
 	}
 	va_end(thor);
-	printf("\n");
+	putchar('\n');
 }
