@@ -29,10 +29,9 @@ void print_all(const char * const format, ...)
 			break;
 		case 's':
 			str = va_arg(thor, char *);
-			if (!str)
+			if (str == NULL)
 			{
 				printf("(nil)");
-				break;
 			}
 			printf("%s", str);
 			break;
@@ -47,5 +46,6 @@ void print_all(const char * const format, ...)
 			} var2++;
 		}
 	}
-	putchar('\n'), va_end(thor);
+	va_end(thor);
+	putchar('\n'); 
 }
