@@ -47,6 +47,5 @@ void print_all(const char * const format, ...)
 			} var2++;
 		}
 	}
-	va_end(thor);
-	putchar('\n'); 
+	va_end(thor), putchar('\n');
 }
