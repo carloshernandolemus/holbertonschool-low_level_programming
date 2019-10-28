@@ -36,8 +36,7 @@ void print_all(const char * const format, ...)
 			}
 			printf("%s", str);
 			break;
-		}
-		var1++;
+		} var1++;
 		var2 = 0;
 		while (arg[var2])
 		{
@@ -45,7 +44,7 @@ void print_all(const char * const format, ...)
 			{
 				printf(", ");
 				break;
-			}var2++;
+			} var2++;
 		}
 	}
 	va_end(thor), putchar('\n');
