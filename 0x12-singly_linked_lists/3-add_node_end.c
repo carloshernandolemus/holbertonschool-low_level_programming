@@ -4,10 +4,10 @@
 #include <string.h>
 #include "lists.h"
 /**
- * add_node - prints the elements and strings
- * @head: List
- * @str: String
- * Return: Number of elements in the list.
+ * add_node_end - Prints the elements and strings from end
+ * @head: Head of the list
+ * @str: String of the list
+ * Return: Address or the head
  */
 list_t *add_node_end(list_t **head, const char *str)
 {
@@ -28,7 +28,7 @@ list_t *add_node_end(list_t **head, const char *str)
 	thor->len = thorchar;
 	thor->next = NULL;
 	rev = *head;
-	
+
 	if (rev == NULL)
 	{
 		*head = thor;
