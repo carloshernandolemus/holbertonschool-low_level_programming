@@ -5,6 +5,7 @@
 /**
  * get_nodeint_at_index - Pop list function
  * @head: head of the list.
+ * @index: Index of the struct
  * Return: Return void
  */
 listint_t *get_nodeint_at_index(listint_t *head, unsigned int index)
