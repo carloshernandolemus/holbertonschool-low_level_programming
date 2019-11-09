@@ -13,11 +13,7 @@ int get_endianness(void)
 
 	var1 = 1;
 	if (*str)
-	{
 		return (1);
-	}
 	else
-	{
 		return (0);
-	}
 }
