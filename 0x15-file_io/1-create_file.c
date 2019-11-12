@@ -7,16 +7,16 @@
  *create_file - Function that creates the text file
  *@filename: This is the file char type
  *@text_content: This is the text content
- *Return: Return the cretes file 
+ *Return: Return the cretes file
  */
 int create_file(const char *filename, char *text_content)
 {
 	int var1, var2 = 0, var3W;
-	
+
 	if (filename == NULL)
 	{
 		return (-1);
-	}	
+	}
 	var1 = open(filename, O_RDWR | O_CREAT | O_TRUNC, 0600);
 	if (var1 == -1)
 	{
