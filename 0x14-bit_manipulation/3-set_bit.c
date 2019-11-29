@@ -1,22 +1,15 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <math.h>
+#include<stdio.h>
 #include "holberton.h"
 /**
- * set_bit - Function that sets the value of a bit
- * @n: Unsigned number
- * @index: This is the position
- * Return: The value int
+ *set_bit - Set the value
+ *@n: long int to be check
+ *@index: Index to check
+ *Return: 1 if it works or zero if it does not
  */
 int set_bit(unsigned long int *n, unsigned int index)
 {
-	int var1 = 0;
-
-	if (index > 64)
-	{
+	if (index >= 63)
 		return (-1);
-	}
-	var1 = 1 << index;
-	*n = (*n & ~var1) | ((1 << index) & var1);
+	*n = 1 << index | *n;
 	return (1);
 }
