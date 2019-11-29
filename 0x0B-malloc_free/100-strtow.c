@@ -1,44 +1,45 @@
 #include"holberton.h"
 #include<stdlib.h>
-
 /**
  *strtow - Splits a string
- *@str: String
+ *@str: string
  *Return: Pointer to an array
  */
-
 char **strtow(char *str)
 {
-	int var1, var2, var4, var5;
-	int **var3;
+	int k;
+	int **t;
+	int j;
+	int l;
+	int i;
 
 	if (width <= 0 || height <= 0)
 		return (NULL);
-	var3 = malloc(height * sizeof(int *));
-	if (var3 == NULL)
+	t = malloc(height * sizeof(int *));
+	if (t == NULL)
 		return (NULL);
 
-	for (var1 = 0; var1 < height; var1++)
+	for (i = 0; i < height; i++)
 	{
-		var3[var1] = (malloc(width * sizeof(int)));
+		t[i] = (malloc(width * sizeof(int)));
 
-		if (var3[var1] == NULL)
+		if (t[i] == NULL)
 		{
-			for (var2 = var1; var2 >= 0; var2--)
+			for (j = i; j >= 0; j--)
 			{
-				free(var3[var2]);
+				free(t[j]);
 			}
-			free(var3);
+			free(t);
 			return (NULL);
 		}
 	}
 
-	for (var4 = 0; var4 < height; var4++)
+	for (k = 0; k < height; k++)
 	{
-		for (var5 = 0; var5 < width; var5++)
+		for (l = 0; l < width; l++)
 		{
-			var3[var4][var5] = 0;
+			t[k][l] = 0;
 		}
 	}
-	return (var3);
+	return (t);
 }
