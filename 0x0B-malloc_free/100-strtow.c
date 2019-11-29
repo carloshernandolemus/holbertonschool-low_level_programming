@@ -7,39 +7,23 @@
  */
 char **strtow(char *str)
 {
-	int k;
-	int **t;
-	int j;
-	int l;
-	int i;
+	char **s;
 
-	if (width <= 0 || height <= 0)
-		return (NULL);
-	t = malloc(height * sizeof(int *));
-	if (t == NULL)
-		return (NULL);
-
-	for (i = 0; i < height; i++)
+	if (str == NULL)
 	{
-		t[i] = (malloc(width * sizeof(int)));
+		return ('\0');
+	}
+	else
+	{
+		s = malloc(4 * sizeof(char));
 
-		if (t[i] == NULL)
+		if (s == NULL)
 		{
-			for (j = i; j >= 0; j--)
-			{
-				free(t[j]);
-			}
-			free(t);
-			return (NULL);
+			return ('\0');
+		}
+		else
+		{
+			return (s);
 		}
 	}
-
-	for (k = 0; k < height; k++)
-	{
-		for (l = 0; l < width; l++)
-		{
-			t[k][l] = 0;
-		}
-	}
-	return (t);
 }
