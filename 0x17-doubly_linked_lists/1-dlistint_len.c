@@ -6,7 +6,7 @@
  */
 size_t dlistint_len(const dlistint_t *h)
 {
-	int var = 0;
+	int var1 = 0;
 
 	if (h == NULL)
 		return (var1);
