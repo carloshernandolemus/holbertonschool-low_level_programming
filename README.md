@@ -1,4 +1,4 @@
-# This is the README for the low level programming
-_0x15. C - File I/O_
+# This is the README for the monty program
+_Monty Programm_
 
-In this repository details how to work the files description
+In this repository details the monty programm
