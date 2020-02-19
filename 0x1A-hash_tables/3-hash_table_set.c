@@ -22,7 +22,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	index = key_index(keyGet, ht->size);
 	current = ht->array[index];
 	while (current && strcmp(current->key, key) != 0)
-                current = current->next;
+		current = current->next;
 
 	if (!current)
 	{
