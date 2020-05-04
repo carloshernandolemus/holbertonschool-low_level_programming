@@ -1,0 +1,1 @@
+_This is the readme for this proyecto fo dynamic libraries_
