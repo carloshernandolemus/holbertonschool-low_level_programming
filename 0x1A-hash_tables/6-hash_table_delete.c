@@ -3,32 +3,33 @@
 #include <stdio.h>
 #include "hash_tables.h"
 
-/**
- * hash_table_delete - Deletes a hash table
- * @ht: Hash table to delete.
- *
- */
 
+/**
+ * hash_table_delete - deletes a hash table
+ * @ht: is the hastable
+ * Return: void
+ */
 void hash_table_delete(hash_table_t *ht)
 {
-	hash_node_t *hnode, *tmp;
-	unsigned long int i;
+	unsigned long int idx;
+	hash_node_t *hr, *nxt;
 
 	if (!ht)
 		return;
 
-	for (i = 0; i < ht->size; i++)
+	for (idx = 0; idx < ht->size; idx++)
 	{
-		hnode = ht->array[i];
-		while (hnode)
+		hr = ht->array[idx];
+		while (hr)
 		{
-			tmp = hnode->next;
-			free(hnode->key);
-			free(hnode->value);
-			free(hnode);
-			hnode = tmp;
+			nxt = hr->next;
+			free(hr->key);
+			free(hr->value);
+			free(hr);
+			hr = nxt;
 		}
 	}
+
 	free(ht->array);
 	free(ht);
 }
