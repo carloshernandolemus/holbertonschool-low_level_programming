@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""The island perimeter function"""
 
 
 def island_perimeter(grid):
+    """The function"""
     if grid is None:
         return 0
     per = 0
